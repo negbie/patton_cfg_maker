@@ -60,7 +60,7 @@ context cs switch\n\
     route default dest-interface IF_NC\n\
 \n\
   mapping-table called-e164 to called-e164 MAP_CALLED_E164_INTERNATIONAL\n\
-    map 00(.%) to +\1\n\
+    map 00(.%) to +\\1\n\
 \n\
   interface sip IF_NC\n\
     bind context sip-gateway GW_SIP\n\
