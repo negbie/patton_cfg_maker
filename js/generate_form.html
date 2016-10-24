@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<script type="text/javascript">
+	function noFormReset {}
+</script>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title> Patton Smartware skb cfg </title>
+		<script src="generate_template.js"></script>
+	</head>
+
+	<body>
+		<form action="javascript:noFormReset()" >
+
+			<h3> Patton Smartware Skype for Business Config </h3>
+
+			<label for="text">Gatewayname:</label></br>
+			<input type="text" id="gatewayname" maxlength="30" placeholder="gatewayname" required></br></br>
+
+			<label for="text">Kunden-DNS1:</label></br>
+			<input type="text" id="dns1" maxlength="15" placeholder="192.168.22.22" required></br></br>
+
+			<label for="text">Netcologne-DNS2:</label></br>
+			<input type="text" id="dns2" maxlength="15" placeholder="89.1.0.1" required></br></br>
+
+			<label for="text">Netcologne-NTP1:</label></br>
+			<input type="text" id="ntp1" maxlength="15" placeholder="89.1.0.1" required></br></br>
+
+			<label for="text">WAN-IP / WAN-Subnet:</label></br>
+			<input type="text" id="wanip" maxlength="15" placeholder="10.10.10.10" required> /
+			<input type="text" id="wanmask" maxlength="15" placeholder="255.255.255.0" required></br></br>
+
+			<label for="text">WAN-Gateway:</label></br>
+			<input type="text" id="wangateway" maxlength="15" placeholder="10.10.10.1" required></br></br>
+
+			<label for="text">LAN-IP / LAN-Subnet:</label></br>
+			<input type="text" id="lanip" maxlength="15" placeholder="192.168.22.11" required> /
+			<input type="text" id="lanmask" maxlength="15" placeholder="255.255.255.0" required></br></br>
+
+			</br></br><button type="submit" id="show">Show</button>
+			<button type="submit" id="download">Download</button></br></br>
+			<div id="config"></div>
+
+		</form>
+	</body>
+</html>
+<script src="generate.js"></script>
+
