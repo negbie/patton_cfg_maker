@@ -1,51 +1,97 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 
-<script type="text/javascript">
-	function noFormReset {}
-</script>
+	<html lang="en">
 
-<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<title> Patton Smartware skb cfg </title>
+			<style type="text/css">
+				.block label { display: inline-block; width: 140px; text-align: left; }
+			</style>
+			<script src="generate_template.js"></script>
+			<script src="generate.js"></script>
+		</head>
 
-	<head>
-		<meta charset="utf-8">
-		<title> Patton Smartware skb cfg </title>
-		<script src="generate_template.js"></script>
-	</head>
+		<body>
 
-	<body>
-		<form action="javascript:noFormReset()" >
+				<h3> Patton Smartware Skype for Business Config </h3></br>
 
-			<h3> Patton Smartware Skype for Business Config </h3>
+				<div class="block">
+					<label for="text">Gatewayname:</label>
+					<input type="text" id="gatewayname" maxlength="30" placeholder="gatewayname" required></br></br>
+				</div>
 
-			<label for="text">Gatewayname:</label></br>
-			<input type="text" id="gatewayname" maxlength="30" placeholder="gatewayname" required></br></br>
+				<div class="block">
+					<label for="text">Customer-DNS:</label>
+					<input type="text" id="dns1" maxlength="15" placeholder="192.168.22.22" required></br></br>
+				</div>
 
-			<label for="text">Kunden-DNS1:</label></br>
-			<input type="text" id="dns1" maxlength="15" placeholder="192.168.22.22" required></br></br>
+				<div class="block">
+					<label for="text">NC-DNS:</label>
+					<input type="text" id="dns2" maxlength="15" placeholder="77.1.0.10" required></br></br>
+				</div>
 
-			<label for="text">Netcologne-DNS2:</label></br>
-			<input type="text" id="dns2" maxlength="15" placeholder="89.1.0.1" required></br></br>
+				<div class="block">
+					<label for="text">NC-NTP:</label>
+					<input type="text" id="ntp1" maxlength="15" placeholder="77.1.0.10" required></br></br>
+				</div>
 
-			<label for="text">Netcologne-NTP1:</label></br>
-			<input type="text" id="ntp1" maxlength="15" placeholder="89.1.0.1" required></br></br>
+				<div class="block">
+					<label for="text">WAN-IP / Mask:</label>
+					<input type="text" id="wanip" maxlength="15" placeholder="10.10.10.10" required> /
+					<input type="text" id="wanmask" maxlength="15" placeholder="255.255.255.0" required></br></br>
+				</div>
 
-			<label for="text">WAN-IP / WAN-Subnet:</label></br>
-			<input type="text" id="wanip" maxlength="15" placeholder="10.10.10.10" required> /
-			<input type="text" id="wanmask" maxlength="15" placeholder="255.255.255.0" required></br></br>
+				<div class="block">
+					<label for="text">WAN-Gateway:</label>
+					<input type="text" id="wangateway" maxlength="15" placeholder="10.10.10.1" required></br></br>
+				</div>
 
-			<label for="text">WAN-Gateway:</label></br>
-			<input type="text" id="wangateway" maxlength="15" placeholder="10.10.10.1" required></br></br>
+				<div class="block">
+					<label for="text">LAN-IP / Mask:</label>
+					<input type="text" id="lanip" maxlength="15" placeholder="192.168.22.11" required> /
+					<input type="text" id="lanmask" maxlength="15" placeholder="255.255.255.0" required></br></br>
+				</div>
 
-			<label for="text">LAN-IP / LAN-Subnet:</label></br>
-			<input type="text" id="lanip" maxlength="15" placeholder="192.168.22.11" required> /
-			<input type="text" id="lanmask" maxlength="15" placeholder="255.255.255.0" required></br></br>
+				<div class="block">
+					<label for="text">SIP-Domain:</label>
+					<input type="text" id="proxy" maxlength="30" placeholder="sip.netcologne.de" required></br></br>
+				</div>
 
-			</br></br><button type="submit" id="show">Show</button>
-			<button type="submit" id="download">Download</button></br></br>
-			<div id="config"></div>
+				<div class="block">
+					<label for="text">Win-Domain:</label>
+					<input type="text" id="windowsdomain" maxlength="30" placeholder="lynctest.local" required></br></br>
+				</div>
 
-		</form>
-	</body>
-</html>
-<script src="generate.js"></script>
+				<div class="block">
+					<label for="text">Lync-Server:</label>
+					<input type="text" id="lyncserver" maxlength="60" placeholder="lyncserver.lynctest.local" required></br></br>
+				</div>
 
+				<div class="block">
+					<label for="text">Monitoring-Port:</label>
+					<input type="text" id="lyncmonitoringport" maxlength="5" placeholder="5068" required></br></br>
+				</div>
+
+				<div class="block">
+					<label for="text">Mediation-Port:</label>
+					<input type="text" id="lyncmediationport" maxlength="5" placeholder="5066" required></br></br>
+				</div>
+
+				<div class="block">
+					<label for="text">SIP-Username:</label>
+					<input type="text" id="username" maxlength="20" placeholder="2211122211" required></br></br>
+				</div>
+
+				<div class="block">
+					<label for="text">SIP-Password:</label>
+					<input type="text" id="password" maxlength="60" placeholder="un1c0rnsh1t" required></br></br></br>
+				</div>
+
+				<input type="submit" id="show" value="Show">
+				<input type="submit" id="download" value="Download">
+
+				</br></br></br><div id="config"></div>
+
+		</body>
+	</html>
